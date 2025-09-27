@@ -1,0 +1,52 @@
+# levels.yaml - Formal progression with lateral entry
+
+level_1_gcse:
+  description: "GCSE functional skills or internal equivalent"
+  entry: "standard_education"
+  assessment: "examination"
+  
+level_2_diploma:
+  description: "Diploma in domain/sector specialization"
+  entry_paths:
+    - from_level_1: "progression"
+    - lateral_entry: "demonstrated_competence"
+  sectors:
+    - computing
+    - arts
+    - design_technology
+  support:
+    - type: "bursary"
+    - type: "loans"
+    - not_eligible: "grants"  # No grants at Level 2
+    
+level_3_application:
+  description: "Applied use of domain - building real things"
+  example: |
+    "I build art websites where I set up HTML/CSS/JS 
+     to show artworks in digital realm"
+  entry_paths:
+    - from_level_2: "standard"
+    - lateral_demonstration: "portfolio_of_work"
+  support:
+    - grants: "project_specific"  # Grants NOW available
+    - bursary: "continued"
+    - loans: "available"
+    
+level_4_masters:
+  description: "Grant projects with tailored support"
+  requirements:
+    - peer_review: true
+    - prove_insights: true
+    - qa_validation: true
+  support:
+    - grants: "full_project"
+    - bursary: "tailored_support"
+    - loans: "available"
+    - additional_funding: "increased"
+    
+level_5_phd:
+  description: "Expert holder with mathematical proof capability"
+  requirements:
+    - prove_via_qa_maths: true
+    - peer_review_others: true
+    - publish_findings: true
